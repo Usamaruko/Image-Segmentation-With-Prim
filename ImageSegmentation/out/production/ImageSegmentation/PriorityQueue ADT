@@ -1,0 +1,16 @@
+ADT PriorityQueue{
+数据对象：
+    D = {e | e ∈ Edge, 0 ≤ i ≤ n-1, n ≥ 0}，其中 Edge 是边的集合，每条边代表两个像素点之间的连接。
+
+数据关系：
+    R = {<e_i, e_i+1> | e_i, e_i+1 ∈ D, i = 0, ..., n-2}，表示边在优先队列中的顺序关系。
+
+基本运算：
+    PriorityQueue(int capacity)：构造函数创建一个初始容量为 capacity 的优先队列。
+    void push(Edge edge)： 进队。将边 edge 添加到优先队列中作为队尾元素。
+    Edge poll()： 出队。从优先队列的头部移除并返回权重最小的边。
+    boolean isEmpty()：判断队列是否为空。若队列为空，返回真；否则返回假。
+    private void siftUp(int index)： 在添加新边后，调整优先队列。
+    private void swap(int i, int j)：交换优先队列中两个位置的边。
+    private void expandData()： 当优先队列容量不足时，扩展其容量。
+}
